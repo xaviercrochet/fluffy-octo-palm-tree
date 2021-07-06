@@ -14,18 +14,28 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'sebdah/vim-delve'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jremmen/vim-ripgrep'
+Plugin 'elzr/vim-json'
+Plugin 'quramy/tsuquyomi'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
-set background=dark
+
+let g:airline_theme='solarized'
+"let g:airline_theme='papercolor'
+set background=light
+"colorscheme PaperColor
 colorscheme solarized
+
 "disable arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+noremap a <Nop>
 
 set encoding=UTF-8
 set number
@@ -58,3 +68,14 @@ set hls
 set laststatus=2
 set statusline=%f
 
+"fuzzy-completion
+ set rtp+=/opt/homebrew/opt/fzf
+
+ "vim-json
+augroup json_autocmd
+  autocmd!
+  autocmd FileType json set autoindent
+  autocmd FileType json set expandtab
+  autocmd FileType json set tabstop=2
+  autocmd FileType json set shiftwidth=2
+augroup END
