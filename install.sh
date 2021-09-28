@@ -9,6 +9,6 @@ cp ~/.vimrc .backup/vimrc
 cp ~/.tmux.conf .backup/tmux.conf
 
 mkdir -p ~/.vim/colors/
-cp -R  ~/.vim/colors vim/colors/
-cp ~/.vimrc vimrc
-cp ~/.tmux.conf tmux.conf
+cp -R vim/colors/ ~/.vim/colors
+cp vimrc ~/.vimrc
+cp tmux.conf ~/.tmux.conf
